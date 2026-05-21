@@ -1,4 +1,6 @@
 import { readMessages, flattenKeys, NAMESPACES } from "@/lib/admin/texts-data";
+
+export const dynamic = "force-dynamic";
 import { notFound } from "next/navigation";
 import { TextEditor } from "./TextEditor";
 import type { Namespace } from "@/lib/admin/texts-data";
