@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "home": "Home",
+    "cookies": "Cookies",
+    "about": "About Us",
+    "b2b": "B2B",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Not just a cookie,",
+      "tagline2": "it's Crunkie.",
+      "subtitle": "Handcrafted with obsession. Designed to impress. Born in Bonn.",
+      "ctaCookies": "Explore Cookies",
+      "ctaB2B": "For Business"
+    },
+    "marquee": {
+      "separator": "·"
+    },
+    "featured": {
+      "title": "The Collection",
+      "subtitle": "Twenty flavors. Zero apologies.",
+      "cta": "View All Cookies"
+    },
+    "statement": {
+      "quote": "Sweet so loud,\nit's Crunkie proud.",
+      "body": "We started in Bonn with one mission: make cookies that actually deserve the hype. Premium ingredients, obsessive craftsmanship, and names you won't forget.",
+      "cta": "Our Story"
+    },
+    "b2bTeaser": {
+      "label": "For Business",
+      "title": "Make your event unforgettable.",
+      "subtitle": "Custom cookie boxes for companies, hotels and events. From boardrooms to weddings — we bring the Crunkie experience to you.",
+      "cta": "Learn More"
+    },
+    "social": {
+      "title": "Follow the crunch",
+      "handle": "Stay up to date with our latest drops, collabs, and behind-the-scenes moments.",
+      "cta": "Follow @crunkiecookie"
+    }
+  },
+  "cookies": {
+    "title": "Our Cookies",
+    "subtitle": "Twenty flavors, each with its own story.",
+    "count": "cookies",
+    "veganLabel": "Vegan",
+    "viewAll": "View All Cookies",
+    "backToAll": "← Back to All Cookies",
+    "flavorNotes": "Flavor Notes",
+    "moreCookies": "More Cookies",
+    "veganBadge": "100% Vegan"
+  },
+  "about": {
+    "title": "About Us",
+    "heroTagline": "Born in Bonn,\nobsessed with perfection.",
+    "storyTitle": "The Crunkie Story",
+    "storyBody": "Crunkie was born from a simple but ambitious idea: cookies should be as exciting as any premium food experience. Based in Bonn, Germany, we craft each cookie with premium ingredients and the kind of care that shows in every bite.",
+    "storyBody2": "What started as an obsession became a brand. Our signature mini box concept turned cookie giving into an experience, and our rotating flavors keep even our regulars guessing. We're proud to be Cologne–Bonn's most talked-about cookie.",
+    "valuesTitle": "What We Stand For",
+    "values": {
+      "quality": {
+        "title": "Premium Quality",
+        "body": "Only the finest ingredients — Belgian chocolate, Sicilian pistachios, ceremonial matcha, real vanilla. No shortcuts."
+      },
+      "design": {
+        "title": "Design Thinking",
+        "body": "Every cookie, box and experience is designed to delight — from the first look to the last crumb."
+      },
+      "craft": {
+        "title": "Artisan Craft",
+        "body": "Handcrafted in small batches. Never mass-produced. Always made with intent and a little bit of love."
+      }
+    },
+    "locationTitle": "Find Us",
+    "address": "Am Neutor 6, 53113 Bonn",
+    "aachenSoon": "Aachen — Opening Soon",
+    "getDirections": "Get Directions"
+  },
+  "b2b": {
+    "title": "Crunkie for Business",
+    "heroSubtitle": "Premium cookies,\ncustom experiences.",
+    "heroBody": "From corporate gifting to hotel amenities and event catering — we create cookie experiences your guests, clients and employees will remember.",
+    "segmentsTitle": "Who We Work With",
+    "segments": {
+      "corporate": {
+        "title": "Corporate & Teams",
+        "body": "Surprise your team with premium cookie boxes. Perfect for onboarding gifts, milestone celebrations, client appreciation and office events."
+      },
+      "hotels": {
+        "title": "Hotels & Hospitality",
+        "body": "Elevate your guest experience with our signature cookie amenities. Available in custom packaging with your branding."
+      },
+      "events": {
+        "title": "Events & Weddings",
+        "body": "Custom cookie boxes for weddings, conferences, trade shows and private events. Fully customizable with your name, colors and message."
+      }
+    },
+    "miniBoxTitle": "The Mini Box",
+    "miniBoxSubtitle": "Our signature product.",
+    "miniBoxBody": "A curated selection of Crunkie flavors in our iconic mini box — the perfect gift, party favor or corporate giveaway. Beautifully packaged, impossible to forget.",
+    "frozenTitle": "Frozen Cookie Program",
+    "frozenSubtitle": "Fresh-baked anytime.",
+    "frozenBody": "Order our premium frozen cookies and bake them fresh whenever you need them. Ready in minutes in a microwave or conventional oven. Perfect for hotel minibar service, event catering and corporate pantries.",
+    "frozenInstructions": {
+      "microwave": "Microwave: 30–40 seconds",
+      "oven": "Oven: 5–8 min at 175°C",
+      "result": "Fresh-baked quality, every time"
+    },
+    "customTitle": "Custom Branding",
+    "customBody": "White-label cookie boxes with your company logo, event name or personal message. Minimum orders apply — contact us for details and pricing.",
+    "ctaTitle": "Ready to Order?",
+    "ctaBody": "Send us a message and we'll get back to you within 24 hours.",
+    "formTitle": "Get in Touch",
+    "form": {
+      "name": "Name",
+      "company": "Company / Event",
+      "type": "Order Type",
+      "quantity": "Estimated Quantity",
+      "message": "Your Message",
+      "send": "Send Inquiry",
+      "namePlaceholder": "Your name",
+      "companyPlaceholder": "Company name or event",
+      "typePlaceholder": "e.g. Corporate gifting, wedding, hotel...",
+      "quantityPlaceholder": "e.g. 50 boxes",
+      "messagePlaceholder": "Tell us about your project..."
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you.",
+    "formTitle": "Send a Message",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "What's on your mind?"
+    },
+    "infoTitle": "Contact",
+    "emailGeneral": "hello@crunkiecookie.com",
+    "emailB2B": "b2b@crunkiecookie.com",
+    "addressTitle": "Our Location",
+    "address": "Am Neutor 6\n53113 Bonn, Germany",
+    "comingSoon": "Aachen — Opening Soon",
+    "followUs": "Follow Us",
+    "directions": "Get Directions",
+    "generalLabel": "General",
+    "b2bLabel": "Business"
+  },
+  "footer": {
+    "tagline": "Not just a cookie, it's Crunkie.",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "followTitle": "Follow Us",
+    "address": "Am Neutor 6, 53113 Bonn",
+    "aachen": "Aachen — Coming Soon",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "vegan": "Vegan",
+    "viewCookies": "View Our Cookies",
+    "backHome": "Back to Home",
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "by": "by"
+  }
+}

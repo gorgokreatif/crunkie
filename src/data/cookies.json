@@ -1,0 +1,423 @@
+[
+  {
+    "slug": "barely-legal",
+    "name": "Barely Legal",
+    "image": "/assets/cookies/cookie-barelylegal.png",
+    "isVegan": false,
+    "featured": true,
+    "description": {
+      "en": "Indecent amounts of dark chocolate, brown butter and fleur de sel. So outrageously good it should be illegal — and honestly, it probably is.",
+      "de": "Schamlose Mengen dunkler Schokolade, Nussbutter und Fleur de Sel. So unverschämt gut, dass es eigentlich illegal sein sollte — und ehrlich gesagt, ist es das wahrscheinlich auch."
+    },
+    "flavorNotes": [
+      "Dark Chocolate",
+      "Brown Butter",
+      "Fleur de Sel"
+    ],
+    "tags": [
+      "chocolate",
+      "butter",
+      "indulgent"
+    ]
+  },
+  {
+    "slug": "berry-trouble",
+    "name": "Berry Trouble",
+    "image": "/assets/cookies/cookie-berry-trouble.png",
+    "isVegan": false,
+    "featured": true,
+    "description": {
+      "en": "Tart raspberries and premium white chocolate in a buttery crinkle cookie. Getting into the right kind of trouble — the kind you never regret.",
+      "de": "Saure Himbeeren und weiße Premium-Schokolade in einem buttrigen Knusper-Cookie. Die richtige Art von Ärger — die Art, die man nie bereut."
+    },
+    "flavorNotes": [
+      "Raspberry",
+      "White Chocolate",
+      "Butter"
+    ],
+    "tags": [
+      "berry",
+      "white chocolate",
+      "fruity"
+    ]
+  },
+  {
+    "slug": "blackout",
+    "name": "Blackout",
+    "image": "/assets/cookies/cookie-blackout.png",
+    "isVegan": false,
+    "featured": true,
+    "description": {
+      "en": "A full blackout in cookie form. Dark chocolate dough, dark chocolate chunks, dark chocolate drizzle. No survivors, no regrets.",
+      "de": "Ein vollständiger Blackout in Keksform. Dunkler Schokoladenteig, dunkle Stücke, dunkle Schokolade darüber. Keine Überlebenden, keine Reue."
+    },
+    "flavorNotes": [
+      "Dark Chocolate",
+      "Intense",
+      "Bittersweet"
+    ],
+    "tags": [
+      "chocolate",
+      "dark",
+      "intense"
+    ]
+  },
+  {
+    "slug": "chocolate",
+    "name": "Chocolate",
+    "image": "/assets/cookies/cookie-chocolate.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "The one that started it all. Premium chocolate chunks in a golden-brown dough with a perfectly crispy edge and an undeniably gooey center.",
+      "de": "Der, der alles begann. Premium-Schokoladenstücke in goldbraunem Teig mit perfekt knusprigem Rand und unbestreitbar weichem Kern."
+    },
+    "flavorNotes": [
+      "Milk Chocolate",
+      "Brown Sugar",
+      "Vanilla"
+    ],
+    "tags": [
+      "classic",
+      "chocolate",
+      "bestseller"
+    ]
+  },
+  {
+    "slug": "clean-cheat",
+    "name": "Clean Cheat",
+    "image": "/assets/cookies/cookie-clean-cheat.png",
+    "isVegan": true,
+    "featured": true,
+    "description": {
+      "en": "All the pleasure, none of the guilt. 100% plant-based, 200% delicious. Your cheat day never looked this clean — or this good.",
+      "de": "Aller Genuss, keine Schuldgefühle. 100% pflanzlich, 200% köstlich. Dein Cheat Day war noch nie so sauber — oder so gut."
+    },
+    "flavorNotes": [
+      "Dark Chocolate",
+      "Coconut Sugar",
+      "Plant-Based"
+    ],
+    "tags": [
+      "vegan",
+      "chocolate",
+      "clean"
+    ]
+  },
+  {
+    "slug": "flex",
+    "name": "Flex",
+    "image": "/assets/cookies/cookie-flex.png",
+    "isVegan": false,
+    "featured": true,
+    "description": {
+      "en": "Milk, dark and white chocolate in one cookie — because why choose? The ultimate triple-threat flex you've been waiting for.",
+      "de": "Milch-, Zartbitter- und weiße Schokolade in einem Keks — denn warum wählen? Das ultimative Triple-Threat-Flex, auf das du gewartet hast."
+    },
+    "flavorNotes": [
+      "Triple Chocolate",
+      "Milk",
+      "Dark",
+      "White"
+    ],
+    "tags": [
+      "chocolate",
+      "premium",
+      "triple chocolate"
+    ]
+  },
+  {
+    "slug": "golden",
+    "name": "Golden",
+    "image": "/assets/cookies/cookie-golden.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Warm caramel, golden brown butter and a whisper of vanilla. Like sunshine compressed into cookie form — warm, glowing and impossible to put down.",
+      "de": "Warmes Karamell, goldbraune Nussbutter und ein Hauch Vanille. Wie Sonnenschein in Keksform komprimiert — warm, leuchtend und unmöglich wegzulegen."
+    },
+    "flavorNotes": [
+      "Caramel",
+      "Brown Butter",
+      "Vanilla"
+    ],
+    "tags": [
+      "caramel",
+      "butter",
+      "golden"
+    ]
+  },
+  {
+    "slug": "habit",
+    "name": "Habit",
+    "image": "/assets/cookies/cookie-habit.png",
+    "isVegan": false,
+    "featured": true,
+    "description": {
+      "en": "Once a week becomes twice becomes every single day. Classic, consistent, and dangerously addictive. You were warned — we weren't sorry.",
+      "de": "Einmal die Woche wird zweimal, wird jeden einzelnen Tag. Klassisch, konsistent und gefährlich süchtig machend. Du wurdest gewarnt — wir waren nicht traurig."
+    },
+    "flavorNotes": [
+      "Brown Sugar",
+      "Butter",
+      "Chocolate Chips"
+    ],
+    "tags": [
+      "classic",
+      "addictive",
+      "everyday"
+    ]
+  },
+  {
+    "slug": "hazel",
+    "name": "Hazel",
+    "image": "/assets/cookies/cookie-hazel.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Roasted hazelnuts and rich chocolate, inspired by Italian tradition but crafted in Bonn. Nutella's sophisticated, grown-up cousin.",
+      "de": "Geröstete Haselnüsse und reiche Schokolade, inspiriert von italienischer Tradition, aber in Bonn kreiert. Nidellas ausgereifter, erwachsener Cousin."
+    },
+    "flavorNotes": [
+      "Hazelnut",
+      "Dark Chocolate",
+      "Roasted"
+    ],
+    "tags": [
+      "hazelnut",
+      "chocolate",
+      "nutty"
+    ]
+  },
+  {
+    "slug": "lotus",
+    "name": "Lotus",
+    "image": "/assets/cookies/cookie-lotus.png",
+    "isVegan": false,
+    "featured": true,
+    "description": {
+      "en": "Caramelized Lotus Biscoff swirled into our signature dough with a hint of cinnamon. Sweet, spiced and absolutely impossible to eat just one.",
+      "de": "Karamellisierter Lotus Biscoff in unseren Signature-Teig gewirbelt mit einem Hauch Zimt. Süß, würzig und absolut unmöglich, nur einen zu essen."
+    },
+    "flavorNotes": [
+      "Lotus Biscoff",
+      "Caramel",
+      "Cinnamon"
+    ],
+    "tags": [
+      "lotus",
+      "caramel",
+      "spiced"
+    ]
+  },
+  {
+    "slug": "matcha-kiss",
+    "name": "Matcha Kiss",
+    "image": "/assets/cookies/cookie-matcha-kiss.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Ceremonial-grade matcha meets premium white chocolate in a delicate, fragrant cookie. A love letter from Japan, postmarked Bonn.",
+      "de": "Ceremonial-Grade Matcha trifft auf weiße Premium-Schokolade in einem zarten, duftenden Cookie. Ein Liebesbrief aus Japan, abgestempelt in Bonn."
+    },
+    "flavorNotes": [
+      "Ceremonial Matcha",
+      "White Chocolate",
+      "Floral"
+    ],
+    "tags": [
+      "matcha",
+      "white chocolate",
+      "japanese"
+    ]
+  },
+  {
+    "slug": "nightshift",
+    "name": "Nightshift",
+    "image": "/assets/cookies/cookie-nightshift.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Dark roast espresso and bittersweet chocolate for those who prefer the night. Sleep is overrated anyway — this is the real fuel.",
+      "de": "Dunkler Espresso und bittere Schokolade für diejenigen, die die Nacht bevorzugen. Schlaf ist sowieso überschätzt — das hier ist der echte Treibstoff."
+    },
+    "flavorNotes": [
+      "Espresso",
+      "Dark Chocolate",
+      "Bittersweet"
+    ],
+    "tags": [
+      "coffee",
+      "dark chocolate",
+      "intense"
+    ]
+  },
+  {
+    "slug": "oreo",
+    "name": "Oreo",
+    "image": "/assets/cookies/cookie-oreo.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Crushed Oreos folded into cream cheese dough, topped with even more Oreos. Cookies inside cookies — no explanation needed, no apology offered.",
+      "de": "Zerkleinerte Oreos in Frischkäseteig gefaltet, belegt mit noch mehr Oreos. Kekse in Keksen — keine Erklärung nötig, keine Entschuldigung angeboten."
+    },
+    "flavorNotes": [
+      "Oreo",
+      "Cream Cheese",
+      "Cookies & Cream"
+    ],
+    "tags": [
+      "oreo",
+      "cream cheese",
+      "indulgent"
+    ]
+  },
+  {
+    "slug": "peel-me-slow",
+    "name": "Peel Me Slow",
+    "image": "/assets/cookies/cookie-peel-me-slow.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Zesty lemon zest and candied orange peel in a buttery shortbread base. Bright, citrusy and worth taking your time with.",
+      "de": "Spritzige Zitronenschale und kandierte Orangenschale in einem buttrigen Mürbteig. Hell, zitrusfrisch und es wert, sich Zeit zu nehmen."
+    },
+    "flavorNotes": [
+      "Lemon",
+      "Orange Zest",
+      "Shortbread"
+    ],
+    "tags": [
+      "citrus",
+      "lemon",
+      "orange"
+    ]
+  },
+  {
+    "slug": "pistachio",
+    "name": "Pistachio",
+    "image": "/assets/cookies/cookie-pistachio.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Ground and whole Sicilian pistachios in a light, fragrant, pale-green dough. The green gold of the cookie world — rare, precious and deeply satisfying.",
+      "de": "Gemahlene und ganze sizilianische Pistazien in einem leichten, duftenden, hellgrünen Teig. Das grüne Gold der Cookie-Welt — selten, kostbar und tief befriedigend."
+    },
+    "flavorNotes": [
+      "Sicilian Pistachio",
+      "Nutty",
+      "Floral"
+    ],
+    "tags": [
+      "pistachio",
+      "nutty",
+      "premium"
+    ]
+  },
+  {
+    "slug": "redflag",
+    "name": "Red Flag",
+    "image": "/assets/cookies/cookie-redflag.png",
+    "isVegan": false,
+    "featured": true,
+    "description": {
+      "en": "Strawberry jam and dark chocolate with a bold hit of chili. You saw the name. You clicked anyway. You already know this ends in addiction.",
+      "de": "Erdbeermarmelade und dunkle Schokolade mit einem kühnen Hauch Chili. Du hast den Namen gesehen. Du hast trotzdem geklickt. Du weißt schon, dass das in Sucht endet."
+    },
+    "flavorNotes": [
+      "Strawberry",
+      "Dark Chocolate",
+      "Chili"
+    ],
+    "tags": [
+      "spicy",
+      "strawberry",
+      "bold"
+    ]
+  },
+  {
+    "slug": "salt",
+    "name": "Salt",
+    "image": "/assets/cookies/cookie-salt.png",
+    "isVegan": false,
+    "featured": true,
+    "description": {
+      "en": "Sea salt and golden caramel on a brown butter base. The cookie that proved once and for all that salty is actually sweet — and unforgettable.",
+      "de": "Meersalz und goldenes Karamell auf Nussbutterboden. Der Keks, der ein für alle Mal bewiesen hat, dass salzig eigentlich süß ist — und unvergesslich."
+    },
+    "flavorNotes": [
+      "Sea Salt",
+      "Caramel",
+      "Brown Butter"
+    ],
+    "tags": [
+      "salted caramel",
+      "butter",
+      "classic"
+    ]
+  },
+  {
+    "slug": "softspot",
+    "name": "Soft Spot",
+    "image": "/assets/cookies/cookie-softspot.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Golden on the outside, impossibly soft in the center. The cookie that has a soft spot for everyone — especially you. Warm vanilla, milk chocolate, pure comfort.",
+      "de": "Außen golden, in der Mitte unmöglich weich. Der Keks, der ein weiches Herz für jeden hat — besonders für dich. Warme Vanille, Milchschokolade, pure Gemütlichkeit."
+    },
+    "flavorNotes": [
+      "Vanilla",
+      "Milk Chocolate",
+      "Soft Center"
+    ],
+    "tags": [
+      "vanilla",
+      "soft",
+      "comfort"
+    ]
+  },
+  {
+    "slug": "vegan-vice",
+    "name": "Vegan Vice",
+    "image": "/assets/cookies/cookie-vegan-vice.png",
+    "isVegan": true,
+    "featured": false,
+    "description": {
+      "en": "Dark chocolate, oat milk and coconut oil conspiring to become your next obsession. 100% vegan, 0% compromise — this is what plant-based indulgence looks like.",
+      "de": "Dunkle Schokolade, Hafermilch und Kokosöl verschwören sich, deine nächste Obsession zu werden. 100% vegan, 0% Kompromiss — so sieht pflanzlicher Genuss aus."
+    },
+    "flavorNotes": [
+      "Dark Chocolate",
+      "Oat Milk",
+      "Coconut"
+    ],
+    "tags": [
+      "vegan",
+      "dark chocolate",
+      "plant-based"
+    ]
+  },
+  {
+    "slug": "walnut",
+    "name": "Walnut",
+    "image": "/assets/cookies/cookie-walnut.png",
+    "isVegan": false,
+    "featured": false,
+    "description": {
+      "en": "Toasted walnut halves folded into a classic brown sugar dough. Rustic, warm and deeply satisfying — the kind of cookie that feels like coming home.",
+      "de": "Geröstete Walnusshälften in klassischem braunem Zuckerteig. Rustikal, warm und tief befriedigend — die Art von Cookie, die sich anfühlt wie nach Hause kommen."
+    },
+    "flavorNotes": [
+      "Toasted Walnut",
+      "Brown Sugar",
+      "Butter"
+    ],
+    "tags": [
+      "walnut",
+      "nutty",
+      "classic"
+    ]
+  }
+]

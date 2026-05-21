@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Colors ── */
+  --color-crunkie-red: #AF5950;
+  --color-crunkie-blue: #4D7792;
+  --color-crunkie-cream: #E8E1D7;
+  --color-crunkie-dark: #1F1714;
+  --color-crunkie-chocolate: #3A241D;
+  --color-crunkie-softcream: #F7F0E7;
+  --color-crunkie-white: #FFFDF8;
+  --color-crunkie-gold: #C79A5B;
+
+  /* ── Typography ── */
+  --font-display: var(--font-fraunces);
+  --font-heading: var(--font-playfair);
+  --font-sans: var(--font-dm-sans);
+
+  /* ── Spacing extras ── */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-88: 22rem;
+  --spacing-128: 32rem;
+
+  /* ── Easing ── */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  background-color: var(--color-crunkie-white);
+  color: var(--color-crunkie-dark);
+  line-height: 1.6;
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: var(--color-crunkie-red);
+  color: var(--color-crunkie-white);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-crunkie-softcream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-crunkie-cream);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-crunkie-chocolate);
+}
+
+/* ── Focus ── */
+:focus-visible {
+  outline: 2px solid var(--color-crunkie-red);
+  outline-offset: 3px;
+}
+
+/* ── Utility: hide scrollbar but keep scrolling ── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Marquee animation ── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+.animate-marquee-slow {
+  animation: marquee 50s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee 35s linear infinite reverse;
+}
+
+/* ── Float animation ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50%       { transform: translateY(-16px) rotate(2deg); }
+}
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* ── Fade-in animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.7s var(--ease-premium) both;
+}
+
+/* ── Spin slow (for badge text rotation) ── */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 18s linear infinite; }
+.animate-spin-reverse { animation: spin-slow 22s linear infinite reverse; }
+
+/* ── Scale entrance ── */
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.5) rotate(-20deg); }
+  to   { opacity: 1; transform: scale(1) rotate(-10deg); }
+}
+
+/* ── Shimmer gradient ── */
+@keyframes shimmer {
+  from { background-position: 200% center; }
+  to   { background-position: -200% center; }
+}
+.text-shimmer {
+  background: linear-gradient(90deg, #E8E1D7 0%, #FFFDF8 30%, #C79A5B 50%, #FFFDF8 70%, #E8E1D7 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ── Diagonal clip utilities ── */
+.clip-wedge-top {
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+}
+.clip-wedge-bottom {
+  clip-path: polygon(0 0%, 100% 0%, 100% 96%, 0 100%);
+}
+
+/* ── Noise overlay (grain texture) ── */
+.noise-overlay {
+  position: relative;
+}
+.noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+  z-index: 1;
+}

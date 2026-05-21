@@ -1,0 +1,169 @@
+{
+  "nav": {
+    "home": "Start",
+    "cookies": "Cookies",
+    "about": "Über uns",
+    "b2b": "B2B",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Nicht nur ein Keks,",
+      "tagline2": "es ist Crunkie.",
+      "subtitle": "Handgemacht mit Leidenschaft. Designed to impress. Geboren in Bonn.",
+      "ctaCookies": "Unsere Cookies",
+      "ctaB2B": "Für Unternehmen"
+    },
+    "marquee": {
+      "separator": "·"
+    },
+    "featured": {
+      "title": "Die Kollektion",
+      "subtitle": "Zwanzig Sorten. Keine Entschuldigungen.",
+      "cta": "Alle Cookies ansehen"
+    },
+    "statement": {
+      "quote": "Sweet so loud,\nit's Crunkie proud.",
+      "body": "Wir haben in Bonn mit einer Mission begonnen: Kekse machen, die den Hype wirklich verdienen. Premium-Zutaten, obsessive Handwerkskunst und Namen, die man nicht vergisst.",
+      "cta": "Unsere Geschichte"
+    },
+    "b2bTeaser": {
+      "label": "Für Unternehmen",
+      "title": "Mach dein Event unvergesslich.",
+      "subtitle": "Individuelle Cookie-Boxen für Unternehmen, Hotels und Events. Vom Boardroom bis zur Hochzeit — wir bringen das Crunkie-Erlebnis zu dir.",
+      "cta": "Mehr erfahren"
+    },
+    "social": {
+      "title": "Folge dem Knusper",
+      "handle": "Bleib auf dem Laufenden mit unseren neuesten Drops, Kollaborationen und Behind-the-Scenes-Momenten.",
+      "cta": "@crunkiecookie folgen"
+    }
+  },
+  "cookies": {
+    "title": "Unsere Cookies",
+    "subtitle": "Zwanzig Sorten, jede mit ihrer eigenen Geschichte.",
+    "count": "Cookies",
+    "veganLabel": "Vegan",
+    "viewAll": "Alle Cookies ansehen",
+    "backToAll": "← Zurück zu allen Cookies",
+    "flavorNotes": "Geschmacksnoten",
+    "moreCookies": "Mehr Cookies",
+    "veganBadge": "100% Vegan"
+  },
+  "about": {
+    "title": "Über uns",
+    "heroTagline": "Geboren in Bonn,\nbesessen von Perfektion.",
+    "storyTitle": "Die Crunkie Geschichte",
+    "storyBody": "Crunkie entstand aus einer einfachen, aber ambitionierten Idee: Kekse sollten genauso aufregend sein wie jedes andere Premium-Food-Erlebnis. Mit Sitz in Bonn kreieren wir jeden Cookie aus besten Zutaten und mit der Sorgfalt, die man bei jedem Bissen schmeckt.",
+    "storyBody2": "Was als Obsession begann, wurde zu einer Marke. Unser Signature-Mini-Box-Konzept machte das Verschenken von Cookies zu einem Erlebnis, und unsere wechselnden Sorten halten selbst unsere Stammkunden in Spannung. Wir sind stolz, die meistdiskutierten Cookies im Köln-Bonner Raum zu sein.",
+    "valuesTitle": "Wofür wir stehen",
+    "values": {
+      "quality": {
+        "title": "Premium-Qualität",
+        "body": "Nur die besten Zutaten — belgische Schokolade, sizilianische Pistazien, Ceremonial-Matcha, echte Vanille. Keine Abkürzungen."
+      },
+      "design": {
+        "title": "Design-Denken",
+        "body": "Jeder Cookie, jede Box und jedes Erlebnis ist darauf ausgelegt, zu begeistern — vom ersten Blick bis zur letzten Krümel."
+      },
+      "craft": {
+        "title": "Handwerkskunst",
+        "body": "In kleinen Chargen handgefertigt. Niemals in Massenproduktion. Immer mit Absicht und ein bisschen Liebe gemacht."
+      }
+    },
+    "locationTitle": "Finde uns",
+    "address": "Am Neutor 6, 53113 Bonn",
+    "aachenSoon": "Aachen — Demnächst",
+    "getDirections": "Route planen"
+  },
+  "b2b": {
+    "title": "Crunkie für Unternehmen",
+    "heroSubtitle": "Premium-Cookies,\nindividuelle Erlebnisse.",
+    "heroBody": "Von Unternehmensgeschenken über Hotel-Amenities bis hin zum Event-Catering — wir kreieren Cookie-Erlebnisse, die deine Gäste, Kunden und Mitarbeiter nicht vergessen werden.",
+    "segmentsTitle": "Mit wem wir arbeiten",
+    "segments": {
+      "corporate": {
+        "title": "Unternehmen & Teams",
+        "body": "Überrasche dein Team mit Premium-Cookie-Boxen. Perfekt für Onboarding-Geschenke, Meilensteinfeierlichkeiten, Kundenwertschätzung und Office-Events."
+      },
+      "hotels": {
+        "title": "Hotels & Hospitality",
+        "body": "Hebe dein Gästeerlebnis mit unseren Signature-Cookie-Amenities auf ein neues Level. Erhältlich in individueller Verpackung mit deinem Branding."
+      },
+      "events": {
+        "title": "Events & Hochzeiten",
+        "body": "Individuelle Cookie-Boxen für Hochzeiten, Konferenzen, Messen und private Events. Vollständig anpassbar mit deinem Namen, Farben und Botschaft."
+      }
+    },
+    "miniBoxTitle": "Die Mini Box",
+    "miniBoxSubtitle": "Unser Signature-Produkt.",
+    "miniBoxBody": "Eine kuratierte Auswahl an Crunkie-Sorten in unserer ikonischen Mini Box — das perfekte Geschenk, Party-Give-away oder Corporate-Giveaway. Wunderschön verpackt, unmöglich zu vergessen.",
+    "frozenTitle": "Tiefkühl-Cookie-Programm",
+    "frozenSubtitle": "Frisch gebacken wann immer du willst.",
+    "frozenBody": "Bestelle unsere Premium-Tiefkühlcookies und backe sie frisch wann immer du sie brauchst. In Minuten fertig in der Mikrowelle oder im Backofen. Perfekt für Hotel-Minibar-Service, Event-Catering und Unternehmens-Pantries.",
+    "frozenInstructions": {
+      "microwave": "Mikrowelle: 30–40 Sekunden",
+      "oven": "Backofen: 5–8 Min. bei 175°C",
+      "result": "Frisch-gebackene Qualität, jedes Mal"
+    },
+    "customTitle": "Custom Branding",
+    "customBody": "White-Label-Cookie-Boxen mit deinem Unternehmenslogo, Event-Namen oder persönlicher Botschaft. Mindestbestellmengen gelten — kontaktiere uns für Details und Preise.",
+    "ctaTitle": "Bereit zur Bestellung?",
+    "ctaBody": "Schick uns eine Nachricht und wir melden uns innerhalb von 24 Stunden.",
+    "formTitle": "Nimm Kontakt auf",
+    "form": {
+      "name": "Name",
+      "company": "Unternehmen / Event",
+      "type": "Bestelltyp",
+      "quantity": "Geschätzte Menge",
+      "message": "Deine Nachricht",
+      "send": "Anfrage senden",
+      "namePlaceholder": "Dein Name",
+      "companyPlaceholder": "Unternehmensname oder Event",
+      "typePlaceholder": "z.B. Unternehmensgeschenke, Hochzeit, Hotel...",
+      "quantityPlaceholder": "z.B. 50 Boxen",
+      "messagePlaceholder": "Erzähl uns von deinem Projekt..."
+    }
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Wir freuen uns von dir zu hören.",
+    "formTitle": "Nachricht senden",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Nachricht senden",
+      "namePlaceholder": "Dein Name",
+      "emailPlaceholder": "deine@email.de",
+      "messagePlaceholder": "Was liegt dir auf dem Herzen?"
+    },
+    "infoTitle": "Kontakt",
+    "emailGeneral": "hello@crunkiecookie.com",
+    "emailB2B": "b2b@crunkiecookie.com",
+    "addressTitle": "Unser Standort",
+    "address": "Am Neutor 6\n53113 Bonn, Deutschland",
+    "comingSoon": "Aachen — Demnächst",
+    "followUs": "Folge uns",
+    "directions": "Route planen",
+    "generalLabel": "Allgemein",
+    "b2bLabel": "Business"
+  },
+  "footer": {
+    "tagline": "Nicht nur ein Keks, es ist Crunkie.",
+    "navTitle": "Navigation",
+    "contactTitle": "Kontakt",
+    "followTitle": "Folge uns",
+    "address": "Am Neutor 6, 53113 Bonn",
+    "aachen": "Aachen — Demnächst",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "common": {
+    "vegan": "Vegan",
+    "viewCookies": "Unsere Cookies ansehen",
+    "backHome": "Zurück zur Startseite",
+    "learnMore": "Mehr erfahren",
+    "contactUs": "Kontakt",
+    "by": "von"
+  }
+}
