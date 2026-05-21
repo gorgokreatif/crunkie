@@ -1,4 +1,4 @@
-import { kv } from "@vercel/kv";
+import { list, put } from "@vercel/blob";
 import { readFileSync } from "fs";
 import { join } from "path";
 
@@ -13,15 +13,22 @@ function loadDefault(locale: Locale): Obj {
 
 export async function readMessages(locale: Locale): Promise<Obj> {
   try {
-    const data = await kv.get<Obj>(`messages:${locale}`);
-    return data ?? loadDefault(locale);
+    const path = `crunkie-data/messages-${locale}.json`;
+    const { blobs } = await list({ prefix: path });
+    if (blobs.length === 0) return loadDefault(locale);
+    const res = await fetch(blobs[0].url, { cache: "no-store" });
+    return res.json();
   } catch {
     return loadDefault(locale);
   }
 }
 
 export async function writeMessages(locale: Locale, data: Obj): Promise<void> {
-  await kv.set(`messages:${locale}`, data);
+  await put(`crunkie-data/messages-${locale}.json`, JSON.stringify(data, null, 2), {
+    access: "public",
+    allowOverwrite: true,
+    addRandomSuffix: false,
+  });
 }
 
 export function flattenKeys(obj: Obj, prefix = ""): Record<string, string> {

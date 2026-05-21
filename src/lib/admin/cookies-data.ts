@@ -1,9 +1,9 @@
-import { kv } from "@vercel/kv";
+import { list, put } from "@vercel/blob";
 import { readFileSync } from "fs";
 import { join } from "path";
 import type { Cookie } from "@/data/cookies";
 
-const KEY = "cookies:all";
+const PATH = "crunkie-data/cookies.json";
 
 function loadDefault(): Cookie[] {
   const raw = readFileSync(join(process.cwd(), "src", "data", "cookies.json"), "utf-8");
@@ -12,18 +12,23 @@ function loadDefault(): Cookie[] {
 
 export async function readCookies(): Promise<Cookie[]> {
   try {
-    const data = await kv.get<Cookie[]>(KEY);
-    if (!data) {
+    const { blobs } = await list({ prefix: PATH });
+    if (blobs.length === 0) {
       const seed = loadDefault();
-      await kv.set(KEY, seed);
+      await writeCookies(seed);
       return seed;
     }
-    return data;
+    const res = await fetch(blobs[0].url, { cache: "no-store" });
+    return res.json();
   } catch {
     return loadDefault();
   }
 }
 
 export async function writeCookies(data: Cookie[]): Promise<void> {
-  await kv.set(KEY, data);
+  await put(PATH, JSON.stringify(data, null, 2), {
+    access: "public",
+    allowOverwrite: true,
+    addRandomSuffix: false,
+  });
 }
