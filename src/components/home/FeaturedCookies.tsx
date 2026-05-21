@@ -3,17 +3,16 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { featuredCookies } from "@/data/cookies";
+import type { Cookie } from "@/data/cookies";
 import { CookieCard } from "@/components/cookies/CookieCard";
 import { EASE_PREMIUM } from "@/lib/utils";
 
-export function FeaturedCookies({ locale }: { locale: string }) {
+export function FeaturedCookies({ cookies }: { cookies: Cookie[] }) {
   const t = useTranslations("home.featured");
 
   return (
     <section className="relative overflow-hidden bg-crunkie-softcream py-24 lg:py-36">
 
-      {/* Giant background text — purely decorative */}
       <div
         aria-hidden
         className="pointer-events-none absolute -top-8 left-0 select-none overflow-hidden leading-none font-display font-black italic text-crunkie-dark/[0.035]"
@@ -24,7 +23,6 @@ export function FeaturedCookies({ locale }: { locale: string }) {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
 
-        {/* Header */}
         <div className="mb-16 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <motion.div
@@ -82,9 +80,8 @@ export function FeaturedCookies({ locale }: { locale: string }) {
           </motion.div>
         </div>
 
-        {/* Grid — extra gap to show off card tilts */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-          {featuredCookies.map((cookie, i) => (
+          {cookies.map((cookie, i) => (
             <CookieCard key={cookie.slug} cookie={cookie} index={i} />
           ))}
         </div>

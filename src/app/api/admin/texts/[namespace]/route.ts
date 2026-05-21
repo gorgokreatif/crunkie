@@ -9,8 +9,8 @@ import type { Namespace } from "@/lib/admin/texts-data";
 
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ namespace: string }> }) {
   const { namespace } = await params;
-  const en = readMessages("en");
-  const de = readMessages("de");
+  const en = await readMessages("en");
+  const de = await readMessages("de");
   const ns = namespace as Namespace;
   const enNs = (en[ns] ?? {}) as Record<string, unknown>;
   const deNs = (de[ns] ?? {}) as Record<string, unknown>;
@@ -28,12 +28,12 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ name
   };
   const ns = namespace as Namespace;
 
-  const enAll = readMessages("en");
-  const deAll = readMessages("de");
+  const enAll = await readMessages("en");
+  const deAll = await readMessages("de");
   enAll[ns] = unflattenKeys(enFlat);
   deAll[ns] = unflattenKeys(deFlat);
-  writeMessages("en", enAll);
-  writeMessages("de", deAll);
+  await writeMessages("en", enAll);
+  await writeMessages("de", deAll);
 
   return NextResponse.json({ ok: true });
 }

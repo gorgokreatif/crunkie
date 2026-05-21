@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFileSync } from "fs";
-import { join } from "path";
+import { put } from "@vercel/blob";
 
 export async function POST(req: NextRequest) {
   const form = await req.formData();
@@ -15,10 +14,8 @@ export async function POST(req: NextRequest) {
 
   const name = form.get("filename") as string | null;
   const filename = name ? `${name}.${ext}` : file.name;
-  const dest = join(process.cwd(), "public", "assets", "cookies", filename);
 
-  const buf = Buffer.from(await file.arrayBuffer());
-  writeFileSync(dest, buf);
+  const blob = await put(`cookies/${filename}`, file, { access: "public" });
 
-  return NextResponse.json({ path: `/assets/cookies/${filename}` });
+  return NextResponse.json({ path: blob.url });
 }

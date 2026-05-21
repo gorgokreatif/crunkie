@@ -1,27 +1,15 @@
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { cookies, getCookieBySlug, getRelatedCookies } from "@/data/cookies";
+import { readCookies } from "@/lib/admin/cookies-data";
 import { CookieDetailHero } from "@/components/cookies/CookieDetailHero";
 import { CookieCard } from "@/components/cookies/CookieCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import type { Cookie } from "@/data/cookies";
+
+export const dynamic = "force-dynamic";
 
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
-}
-
-export async function generateStaticParams() {
-  return cookies.map((c) => ({ slug: c.slug }));
-}
-
-export async function generateMetadata({ params }: Props) {
-  const { locale, slug } = await params;
-  const cookie = getCookieBySlug(slug);
-  if (!cookie) return {};
-  return {
-    title: cookie.name,
-    description:
-      locale === "de" ? cookie.description.de : cookie.description.en,
-  };
 }
 
 export default async function CookieDetailPage({ params }: Props) {
@@ -29,26 +17,28 @@ export default async function CookieDetailPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("cookies");
 
-  const cookie = getCookieBySlug(slug);
+  const all = await readCookies();
+  const cookie = all.find((c) => c.slug === slug);
   if (!cookie) notFound();
 
   const description =
     locale === "de" ? cookie.description.de : cookie.description.en;
-  const related = getRelatedCookies(slug, 4);
+
+  const related: Cookie[] = all
+    .filter((c) => c.slug !== slug)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 4);
 
   return (
     <div className="bg-crunkie-softcream">
 
-      {/* ── Full-viewport animated hero ── */}
       <CookieDetailHero
         cookie={cookie}
         backLabel={t("backToAll")}
         flavorLabel={t("flavorNotes")}
       />
 
-      {/* ── Description section ── */}
       <div className="relative bg-crunkie-softcream py-24 lg:py-32">
-        {/* Diagonal top edge */}
         <div
           className="absolute inset-x-0 -top-[3vw] h-[6vw] bg-crunkie-softcream"
           style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%)" }}
@@ -70,7 +60,6 @@ export default async function CookieDetailPage({ params }: Props) {
             </p>
           </ScrollReveal>
 
-          {/* Tags */}
           {cookie.tags.length > 0 && (
             <ScrollReveal delay={0.2} className="mt-10 flex flex-wrap gap-2">
               {cookie.tags.map((tag) => (
@@ -86,7 +75,6 @@ export default async function CookieDetailPage({ params }: Props) {
         </div>
       </div>
 
-      {/* ── Related cookies ── */}
       <div className="bg-crunkie-white py-24 lg:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <ScrollReveal className="mb-12">

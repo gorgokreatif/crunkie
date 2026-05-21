@@ -4,7 +4,7 @@ import { CookieForm } from "../CookieForm";
 
 export default async function EditCookiePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const cookie = readCookies().find((c) => c.slug === slug);
+  const cookie = (await readCookies()).find((c) => c.slug === slug);
   if (!cookie) notFound();
 
   return (

@@ -13,8 +13,8 @@ const NS_COLORS: Record<string, string> = {
   common:  "#6B7280",
 };
 
-export default function TextsPage() {
-  const en = readMessages("en");
+export default async function TextsPage() {
+  const en = await readMessages("en");
 
   return (
     <div className="p-8 lg:p-10">

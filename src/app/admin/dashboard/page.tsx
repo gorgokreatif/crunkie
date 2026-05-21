@@ -2,8 +2,8 @@ import { readCookies } from "@/lib/admin/cookies-data";
 import Link from "next/link";
 import { Cookie, FileText, Leaf, Star } from "lucide-react";
 
-export default function DashboardPage() {
-  const cookies = readCookies();
+export default async function DashboardPage() {
+  const cookies = await readCookies();
   const veganCount = cookies.filter((c) => c.isVegan).length;
   const featuredCount = cookies.filter((c) => c.featured).length;
 

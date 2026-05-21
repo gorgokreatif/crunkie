@@ -4,8 +4,8 @@ import Image from "next/image";
 import { Plus } from "lucide-react";
 import { DeleteCookieButton } from "./DeleteCookieButton";
 
-export default function CookiesListPage() {
-  const cookies = readCookies();
+export default async function CookiesListPage() {
+  const cookies = await readCookies();
 
   return (
     <div className="p-8 lg:p-10">

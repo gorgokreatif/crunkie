@@ -1,7 +1,4 @@
-import { cookies } from "@/data/cookies";
-
-export function CookieMarquee() {
-  const names = cookies.map((c) => c.name);
+export function CookieMarquee({ names }: { names: string[] }) {
   const doubled = [...names, ...names];
 
   return (

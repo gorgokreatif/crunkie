@@ -1,18 +1,27 @@
-import { readFileSync, writeFileSync } from "fs";
+import { kv } from "@vercel/kv";
+import { readFileSync } from "fs";
 import { join } from "path";
 
 type Obj = Record<string, unknown>;
 
 export type Locale = "en" | "de";
 
-export function readMessages(locale: Locale): Obj {
-  const path = join(process.cwd(), "messages", `${locale}.json`);
-  return JSON.parse(readFileSync(path, "utf-8")) as Obj;
+function loadDefault(locale: Locale): Obj {
+  const raw = readFileSync(join(process.cwd(), "messages", `${locale}.json`), "utf-8");
+  return JSON.parse(raw) as Obj;
 }
 
-export function writeMessages(locale: Locale, data: Obj): void {
-  const path = join(process.cwd(), "messages", `${locale}.json`);
-  writeFileSync(path, JSON.stringify(data, null, 2) + "\n", "utf-8");
+export async function readMessages(locale: Locale): Promise<Obj> {
+  try {
+    const data = await kv.get<Obj>(`messages:${locale}`);
+    return data ?? loadDefault(locale);
+  } catch {
+    return loadDefault(locale);
+  }
+}
+
+export async function writeMessages(locale: Locale, data: Obj): Promise<void> {
+  await kv.set(`messages:${locale}`, data);
 }
 
 export function flattenKeys(obj: Obj, prefix = ""): Record<string, string> {

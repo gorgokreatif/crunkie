@@ -8,8 +8,8 @@ export default async function TextNamespacePage({ params }: { params: Promise<{ 
   if (!NAMESPACES.includes(namespace as Namespace)) notFound();
 
   const ns = namespace as Namespace;
-  const en = readMessages("en");
-  const de = readMessages("de");
+  const en = await readMessages("en");
+  const de = await readMessages("de");
 
   const enFlat = flattenKeys((en[ns] ?? {}) as Record<string, unknown>);
   const deFlat = flattenKeys((de[ns] ?? {}) as Record<string, unknown>);
