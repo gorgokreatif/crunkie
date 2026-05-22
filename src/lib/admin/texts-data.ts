@@ -1,6 +1,7 @@
 import { list, put } from "@vercel/blob";
 import { readFileSync } from "fs";
 import { join } from "path";
+import { revalidateTag } from "next/cache";
 
 type Obj = Record<string, unknown>;
 
@@ -29,6 +30,7 @@ export async function writeMessages(locale: Locale, data: Obj): Promise<void> {
     allowOverwrite: true,
     addRandomSuffix: false,
   });
+  revalidateTag(`messages-${locale}`, "max");
 }
 
 export function flattenKeys(obj: Obj, prefix = ""): Record<string, string> {

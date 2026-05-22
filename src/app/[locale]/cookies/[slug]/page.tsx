@@ -6,8 +6,6 @@ import { CookieCard } from "@/components/cookies/CookieCard";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import type { Cookie } from "@/data/cookies";
 
-export const dynamic = "force-dynamic";
-
 interface Props {
   params: Promise<{ locale: string; slug: string }>;
 }

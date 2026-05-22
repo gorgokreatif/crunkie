@@ -181,9 +181,15 @@ export function Hero() {
   const t = useTranslations("home.hero");
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
   const total = SLIDES.length;
   const slide = SLIDES[active];
   const cookie = getCookieBySlug(slide.id);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px), (prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+  }, []);
 
 
   const mX = useMotionValue(0);
@@ -367,7 +373,7 @@ export function Hero() {
                       className="relative h-full w-full"
                     >
                       {/* Pulsing ring on primary */}
-                      {isPrimary && (
+                      {isPrimary && !reducedMotion && (
                         <motion.div
                           animate={{ scale: [1, 1.18, 1], opacity: [0.18, 0.04, 0.18] }}
                           transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
@@ -378,7 +384,7 @@ export function Hero() {
 
                       {/* Float */}
                       <motion.div
-                        animate={{ y: item.floatY }}
+                        animate={reducedMotion ? {} : { y: item.floatY }}
                         transition={{
                           duration: item.floatDuration,
                           repeat: Infinity,
@@ -424,7 +430,7 @@ export function Hero() {
             >
               <div className="mb-3 flex items-center gap-2.5">
                 <motion.span
-                  animate={{ scale: [1, 1.7, 1], opacity: [1, 0.15, 1] }}
+                  animate={reducedMotion ? {} : { scale: [1, 1.7, 1], opacity: [1, 0.15, 1] }}
                   transition={{ duration: 2.2, repeat: Infinity, delay: 1.4 }}
                   className="h-1.5 w-1.5 rounded-full bg-crunkie-red"
                 />
@@ -494,7 +500,7 @@ export function Hero() {
                 >
                   {t("ctaCookies")}
                   <motion.span
-                    animate={{ x: [0, 4, 0] }}
+                    animate={reducedMotion ? {} : { x: [0, 4, 0] }}
                     transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
                   >
                     →
@@ -628,7 +634,7 @@ export function Hero() {
                   >
                     View Cookie
                     <motion.span
-                      animate={{ x: [0, 3, 0] }}
+                      animate={reducedMotion ? {} : { x: [0, 3, 0] }}
                       transition={{ duration: 1.3, repeat: Infinity, ease: "easeInOut" }}
                     >
                       →
@@ -650,7 +656,7 @@ export function Hero() {
         className="absolute bottom-3 left-1/2 z-30 -translate-x-1/2"
       >
         <motion.div
-          animate={{ y: [0, 6, 0] }}
+          animate={reducedMotion ? {} : { y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           className="flex h-9 w-5 items-start justify-center rounded-full border-2 border-crunkie-cream/14 p-1.5"
         >

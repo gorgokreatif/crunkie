@@ -8,8 +8,6 @@ import { BrandStatement } from "@/components/home/BrandStatement";
 import { B2BTeaser } from "@/components/home/B2BTeaser";
 import { SocialStrip } from "@/components/home/SocialStrip";
 
-export const dynamic = "force-dynamic";
-
 interface Props {
   params: Promise<{ locale: string }>;
 }

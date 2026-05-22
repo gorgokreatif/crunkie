@@ -3,8 +3,6 @@ import { readCookies } from "@/lib/admin/cookies-data";
 import { CookieCard } from "@/components/cookies/CookieCard";
 import { CookiesHero } from "@/components/cookies/CookiesHero";
 
-export const dynamic = "force-dynamic";
-
 export async function generateMetadata({
   params,
 }: {

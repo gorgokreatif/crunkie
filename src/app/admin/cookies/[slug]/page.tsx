@@ -1,6 +1,4 @@
 import { readCookies } from "@/lib/admin/cookies-data";
-
-export const dynamic = "force-dynamic";
 import { notFound } from "next/navigation";
 import { CookieForm } from "../CookieForm";
 

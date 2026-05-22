@@ -1,6 +1,4 @@
 import { readCookies } from "@/lib/admin/cookies-data";
-
-export const dynamic = "force-dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import { Plus } from "lucide-react";

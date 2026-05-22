@@ -1,6 +1,4 @@
 import { readMessages, flattenKeys, NAMESPACES } from "@/lib/admin/texts-data";
-
-export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { FileText } from "lucide-react";
 

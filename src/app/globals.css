@@ -118,6 +118,20 @@ body {
 .animate-spin-slow { animation: spin-slow 18s linear infinite; }
 .animate-spin-reverse { animation: spin-slow 22s linear infinite reverse; }
 
+/* ── Reduce motion on mobile / user preference ── */
+@media (max-width: 640px), (prefers-reduced-motion: reduce) {
+  .animate-spin-slow,
+  .animate-spin-reverse,
+  .animate-float,
+  .animate-marquee-slow,
+  .text-shimmer {
+    animation-duration: 40s;
+  }
+  .animate-marquee {
+    animation-duration: 60s;
+  }
+}
+
 /* ── Scale entrance ── */
 @keyframes scale-in {
   from { opacity: 0; transform: scale(0.5) rotate(-20deg); }
