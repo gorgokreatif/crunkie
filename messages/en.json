@@ -165,5 +165,119 @@
     "learnMore": "Learn More",
     "contactUs": "Contact Us",
     "by": "by"
+  },
+  "quiz": {
+    "title": "Which Crunkie\nAre You?",
+    "subtitle": "3 questions. One perfect match.",
+    "start": "Find Out",
+    "restart": "Try Again",
+    "share": "Share Your Result",
+    "shareFallback": "Link copied!",
+    "viewCookie": "Explore This Cookie",
+    "viewAll": "See All Cookies",
+    "youAre": "You are",
+    "q1": {
+      "question": "It's 2AM. You're:",
+      "a": "Still on episode 6. No regrets.",
+      "b": "Last one on the dance floor.",
+      "c": "Third coffee. Grinding.",
+      "d": "Asleep since 10. Exactly as planned."
+    },
+    "q2": {
+      "question": "Your Sunday vibe:",
+      "a": "Couch. Blanket. Do not disturb.",
+      "b": "Farmers market, matcha, maybe a journal.",
+      "c": "Spontaneous trip. Zero plan. Perfect.",
+      "d": "Cooking for everyone. House full."
+    },
+    "q3": {
+      "question": "Pick your poison:",
+      "a": "Something that hits hard.",
+      "b": "Bright, fresh, completely unexpected.",
+      "c": "The classic — but elevated.",
+      "d": "Good vibes only. Also plant-based."
+    },
+    "results": {
+      "barely-legal": {
+        "tagline": "Dangerously Good",
+        "personality": "You don't do anything halfway. You're the person who turns a regular Tuesday into an occasion — and makes it look effortless. A bit illegal? Maybe. Unforgettable? Always."
+      },
+      "berry-trouble": {
+        "tagline": "Sweet With a Sharp Edge",
+        "personality": "Playful but precise. You show up unexpected and somehow make everything better. People say trouble — you call it an adventure."
+      },
+      "blackout": {
+        "tagline": "No Filter, No Regrets",
+        "personality": "All in, no apologies. You live at full volume and the night is your territory. You don't do things halfway — or at all, apparently."
+      },
+      "chocolate": {
+        "tagline": "The Original",
+        "personality": "Timeless. Dependable. The one everyone comes back to. You don't need to be loud — your presence says enough."
+      },
+      "clean-cheat": {
+        "tagline": "Principled Pleasure",
+        "personality": "You have values — and you refuse to compromise on them. That's not restraint. That's identity. And somehow, it's the most satisfying choice in the room."
+      },
+      "flex": {
+        "tagline": "The Full Package",
+        "personality": "Why settle for one when you can have everything? You bring the energy, the ideas, and somehow still have time for everyone. The ultimate triple threat."
+      },
+      "golden": {
+        "tagline": "Warm By Nature",
+        "personality": "Optimistic, reliable, and quietly radiant. You're the person who makes everywhere feel like a good place to be. The warm kind of magic that doesn't ask for credit."
+      },
+      "habit": {
+        "tagline": "The Daily Essential",
+        "personality": "The quiet constant everyone counts on. Not flashy, not loud — just consistently, remarkably good. The kind of reliable that earns loyalty for life."
+      },
+      "hazel": {
+        "tagline": "Effortlessly Sophisticated",
+        "personality": "You bring depth and warmth to everything you touch. Inspired by the world, grounded in craft — the grown-up in the room who never lost the fun."
+      },
+      "lotus": {
+        "tagline": "Comfortably Addictive",
+        "personality": "You make warmth feel like an art form. Spiced, layered, impossible to get enough of. People come for one reason and stay for ten."
+      },
+      "matcha-kiss": {
+        "tagline": "Quietly Magnetic",
+        "personality": "You're ahead of the curve — always. Mindful, aesthetic, with a subtle intensity that draws people in. The room notices when you arrive."
+      },
+      "nightshift": {
+        "tagline": "Built for the Long Game",
+        "personality": "You do your best work when everyone else has clocked out. Sharp, focused, powered by something darker than most. Sleep is optional. Excellence is not."
+      },
+      "oreo": {
+        "tagline": "Nostalgic Icon",
+        "personality": "Instantly beloved. You carry a comfort that feels familiar and thrilling at once. Nobody regrets having you around — they always wish there was more."
+      },
+      "peel-me-slow": {
+        "tagline": "Bright Energy",
+        "personality": "Fresh, unexpected, and impossible to ignore. You're the one who walks in and the whole room wakes up. Citrus-sharp and impossible to forget."
+      },
+      "pistachio": {
+        "tagline": "Rare and Worth It",
+        "personality": "Selective, sophisticated, and quietly exceptional. You're not for everyone — which is exactly what makes you so sought after."
+      },
+      "redflag": {
+        "tagline": "The Plot Twist",
+        "personality": "Bold, spicy, and somehow irresistible despite every warning sign. You're the one they said to avoid — and the one they can't stop thinking about."
+      },
+      "salt": {
+        "tagline": "The Perfect Contrast",
+        "personality": "You understand balance better than almost anyone. The contrast is the whole point — and you've made it a lifestyle. Sweet and sharp. Grounded and surprising."
+      },
+      "softspot": {
+        "tagline": "Quietly Essential",
+        "personality": "Warmth, comfort, and the kind of presence that makes everyone exhale. You're the reason people feel at home. The soft spot everyone secretly has for you? Earned."
+      },
+      "vegan-vice": {
+        "tagline": "No Compromise",
+        "personality": "Your principles aren't negotiable — and neither is your intensity. You do things fully, your way, without shortcuts. Plant-based, principle-driven, completely unapologetic."
+      },
+      "walnut": {
+        "tagline": "Grounded and Real",
+        "personality": "Rustic, honest, and deeply satisfying. You don't need the spotlight — your presence speaks for itself. The kind of person who feels like coming home."
+      }
+    }
   }
 }

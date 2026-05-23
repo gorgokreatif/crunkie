@@ -165,5 +165,119 @@
     "learnMore": "Mehr erfahren",
     "contactUs": "Kontakt",
     "by": "von"
+  },
+  "quiz": {
+    "title": "Welcher Crunkie\nbist du?",
+    "subtitle": "3 Fragen. Eine perfekte Übereinstimmung.",
+    "start": "Herausfinden",
+    "restart": "Nochmal",
+    "share": "Ergebnis teilen",
+    "shareFallback": "Link kopiert!",
+    "viewCookie": "Diesen Cookie entdecken",
+    "viewAll": "Alle Cookies ansehen",
+    "youAre": "Du bist",
+    "q1": {
+      "question": "Es ist 2 Uhr. Du...",
+      "a": "Noch bei Folge 6. Keine Reue.",
+      "b": "Als letzter auf der Tanzfläche.",
+      "c": "Dritter Kaffee. Am Grinden.",
+      "d": "Seit 22 Uhr schlafen. Genau so geplant."
+    },
+    "q2": {
+      "question": "Dein Sonntags-Vibe:",
+      "a": "Couch. Decke. Nicht stören.",
+      "b": "Wochenmarkt, Matcha, vielleicht ein Tagebuch.",
+      "c": "Spontaner Ausflug. Null Plan. Perfekt.",
+      "d": "Für alle kochen. Haus voll."
+    },
+    "q3": {
+      "question": "Wähle dein Gift:",
+      "a": "Etwas, das richtig trifft.",
+      "b": "Hell, frisch, völlig unerwartet.",
+      "c": "Das Klassische — aber elevated.",
+      "d": "Nur gute Vibes. Auch pflanzlich."
+    },
+    "results": {
+      "barely-legal": {
+        "tagline": "Gefährlich Gut",
+        "personality": "Du machst nichts halbherzig. Du bist die Person, die aus einem normalen Dienstag eine Occasion macht — und das mühelos aussehen lässt. Ein bisschen illegal? Vielleicht. Unvergesslich? Immer."
+      },
+      "berry-trouble": {
+        "tagline": "Süß mit Scharfer Kante",
+        "personality": "Verspielt, aber präzise. Du tauchst unerwartet auf und machst irgendwie alles besser. Die Leute sagen Trouble — du nennst es Abenteuer."
+      },
+      "blackout": {
+        "tagline": "Ohne Filter, Ohne Reue",
+        "personality": "Voll dabei, keine Entschuldigungen. Du lebst mit voller Lautstärke und die Nacht ist dein Territorium. Du machst Dinge nicht halbherzig — oder gar nicht."
+      },
+      "chocolate": {
+        "tagline": "Das Original",
+        "personality": "Zeitlos. Zuverlässig. Die Person, zu der alle zurückkehren. Du musst nicht laut sein — deine Präsenz sagt genug."
+      },
+      "clean-cheat": {
+        "tagline": "Prinzipienvoller Genuss",
+        "personality": "Du hast Werte — und du weichst nicht von ihnen ab. Das ist keine Enthaltsamkeit. Das ist Identität. Und irgendwie ist es die befriedigendste Wahl im Raum."
+      },
+      "flex": {
+        "tagline": "Das Gesamtpaket",
+        "personality": "Warum mit einem begnügen, wenn du alles haben kannst? Du bringst Energie, Ideen und hast irgendwie noch Zeit für alle. Das ultimative Triple Threat."
+      },
+      "golden": {
+        "tagline": "Von Natur aus Warm",
+        "personality": "Optimistisch, zuverlässig und still strahlend. Du bist die Person, die überall das Gefühl gibt, ein guter Ort zu sein. Die warme Magie, die keine Anerkennung verlangt."
+      },
+      "habit": {
+        "tagline": "Das Tägliche Essential",
+        "personality": "Die stille Konstante, auf die alle zählen. Nicht flashy, nicht laut — nur konsistent, bemerkenswert gut. Die Zuverlässigkeit, die lebenslange Loyalität verdient."
+      },
+      "hazel": {
+        "tagline": "Mühelos Sophisticated",
+        "personality": "Du bringst Tiefe und Wärme in alles, was du anrührst. Von der Welt inspiriert, im Handwerk verwurzelt — der Erwachsene im Raum, der nie den Spaß verloren hat."
+      },
+      "lotus": {
+        "tagline": "Angenehm Süchtig Machend",
+        "personality": "Du machst aus Wärme eine Kunstform. Gewürzt, vielschichtig, unmöglich, genug davon zu bekommen. Die Leute kommen aus einem Grund und bleiben für zehn."
+      },
+      "matcha-kiss": {
+        "tagline": "Still Magnetisch",
+        "personality": "Du bist der Zeit voraus — immer. Achtsam, ästhetisch, mit einer subtilen Intensität, die Menschen anzieht. Der Raum bemerkt, wenn du ankommst."
+      },
+      "nightshift": {
+        "tagline": "Fürs Lange Spiel Gebaut",
+        "personality": "Du machst deine beste Arbeit, wenn alle anderen längst aufgehört haben. Scharf, fokussiert, angetrieben von etwas Dunklerem als die meisten. Schlaf ist optional. Exzellenz nicht."
+      },
+      "oreo": {
+        "tagline": "Nostalgische Ikone",
+        "personality": "Sofort geliebt. Du trägst einen Komfort, der sich vertraut und aufregend zugleich anfühlt. Niemand bereut, dass du dabei bist — alle wünschen sich immer mehr."
+      },
+      "peel-me-slow": {
+        "tagline": "Helle Energie",
+        "personality": "Frisch, unerwartet und unmöglich zu ignorieren. Du bist die Person, die hereinkommt und plötzlich den ganzen Raum aufweckt. Zitrussscharf und unmöglich zu vergessen."
+      },
+      "pistachio": {
+        "tagline": "Selten und Es Wert",
+        "personality": "Selektiv, sophisticated und still außergewöhnlich. Du bist nicht für jeden — was dich genau so begehrt macht."
+      },
+      "redflag": {
+        "tagline": "Die Plotwendung",
+        "personality": "Mutig, scharf und irgendwie unwiderstehlich trotz jeder Warnung. Du bist die Person, von der alle sagten, man solle sie meiden — und an die sie nicht aufhören zu denken."
+      },
+      "salt": {
+        "tagline": "Der Perfekte Kontrast",
+        "personality": "Du verstehst Balance besser als fast jeder andere. Der Kontrast ist der ganze Punkt — und du hast ihn zu einem Lebensstil gemacht. Süß und scharf. Geerdet und überraschend."
+      },
+      "softspot": {
+        "tagline": "Still Unverzichtbar",
+        "personality": "Wärme, Komfort und die Präsenz, die alle aufatmen lässt. Du bist der Grund, warum Menschen sich zuhause fühlen. Der Soft Spot, den alle insgeheim für dich haben? Verdient."
+      },
+      "vegan-vice": {
+        "tagline": "Kein Kompromiss",
+        "personality": "Deine Prinzipien sind nicht verhandelbar — und deine Intensität auch nicht. Du machst Dinge vollständig, auf deine Weise, ohne Abkürzungen. Pflanzlich, prinzipientreu, vollkommen unapologetisch."
+      },
+      "walnut": {
+        "tagline": "Geerdet und Echt",
+        "personality": "Rustikal, ehrlich und tief befriedigend. Du brauchst das Rampenlicht nicht — deine Präsenz spricht für sich. Die Art von Person, die sich anfühlt wie nach Hause kommen."
+      }
+    }
   }
 }
