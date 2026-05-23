@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
@@ -90,15 +90,17 @@ const PHASE_BLOBS: Record<Phase, { color: string; accent: string }> = {
 };
 
 const slideVariants = {
-  enter: { opacity: 0, x: 40 },
+  enter: (rm: boolean) => ({ opacity: 0, x: rm ? 0 : 40 }),
   center: { opacity: 1, x: 0 },
-  exit: { opacity: 0, x: -40 },
+  exit: (rm: boolean) => ({ opacity: 0, x: rm ? 0 : -40 }),
 };
 
 // ── Intro Screen ─────────────────────────────────────────────────────────────
-function IntroScreen({ onStart }: { onStart: () => void }) {
+function IntroScreen({ onStart, reducedMotion }: { onStart: () => void; reducedMotion: boolean }) {
   const t = useTranslations("quiz");
   const titleLines = t("title").split("\n");
+  const blur1 = reducedMotion ? "blur(30px)" : "blur(120px)";
+  const blur2 = reducedMotion ? "blur(20px)" : "blur(80px)";
 
   return (
     <div className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-24 text-center">
@@ -106,12 +108,12 @@ function IntroScreen({ onStart }: { onStart: () => void }) {
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-1/2 h-[60vw] w-[60vw] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30"
-        style={{ backgroundColor: "#AF5950", filter: "blur(120px)" }}
+        style={{ backgroundColor: "#AF5950", filter: blur1 }}
       />
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 top-0 h-[30vw] w-[30vw] rounded-full opacity-15"
-        style={{ backgroundColor: "#C79A5B", filter: "blur(80px)" }}
+        style={{ backgroundColor: "#C79A5B", filter: blur2 }}
       />
 
       {/* Watermark */}
@@ -236,12 +238,14 @@ function QuestionScreen({
   options,
   accent,
   onSelect,
+  reducedMotion,
 }: {
   phaseNum: number;
   questionKey: string;
   options: QuestionOption[];
   accent: string;
   onSelect: (value: string) => void;
+  reducedMotion: boolean;
 }) {
   const t = useTranslations("quiz");
   const [selected, setSelected] = useState<string | null>(null);
@@ -317,10 +321,10 @@ function QuestionScreen({
             return (
               <motion.button
                 key={opt.value}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: reducedMotion ? 0 : 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 + i * 0.07, duration: 0.5, ease: EASE_PREMIUM }}
-                whileHover={!selected ? { scale: 1.02, y: -2 } : {}}
+                transition={{ delay: reducedMotion ? 0 : 0.1 + i * 0.07, duration: 0.4, ease: EASE_PREMIUM }}
+                whileHover={!selected && !reducedMotion ? { scale: 1.02, y: -2 } : {}}
                 whileTap={!selected ? { scale: 0.97 } : {}}
                 onClick={() => handleSelect(opt.value)}
                 className="relative overflow-hidden rounded-2xl border p-5 text-left transition-all duration-300"
@@ -360,13 +364,17 @@ function QuestionScreen({
 function ResultScreen({
   slug,
   onRestart,
+  reducedMotion,
 }: {
   slug: string;
   onRestart: () => void;
+  reducedMotion: boolean;
 }) {
   const t = useTranslations("quiz");
   const cookie = getCookieBySlug(slug);
   const [copied, setCopied] = useState(false);
+  const blur1 = reducedMotion ? "blur(30px)" : "blur(110px)";
+  const blur2 = reducedMotion ? "blur(20px)" : "blur(90px)";
 
   const handleShare = useCallback(async () => {
     const url = window.location.href;
@@ -400,12 +408,12 @@ function ResultScreen({
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-1/3 h-[55vw] w-[55vw] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-25"
-        style={{ backgroundColor: "#AF5950", filter: "blur(110px)" }}
+        style={{ backgroundColor: "#AF5950", filter: blur1 }}
       />
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 bottom-0 h-[35vw] w-[35vw] rounded-full opacity-15"
-        style={{ backgroundColor: "#C79A5B", filter: "blur(90px)" }}
+        style={{ backgroundColor: "#C79A5B", filter: blur2 }}
       />
 
       {/* Dot grid */}
@@ -455,12 +463,12 @@ function ResultScreen({
         {/* Cookie image */}
         <motion.div
           initial={{ scale: 0.5, opacity: 0, rotate: -15 }}
-          animate={{ scale: 1, opacity: 1, rotate: -4 }}
+          animate={{ scale: 1, opacity: 1, rotate: reducedMotion ? 0 : -4 }}
           transition={{ delay: 0.22, type: "spring", stiffness: 200, damping: 20 }}
           className="mx-auto mb-10 h-56 w-56 md:h-72 md:w-72"
         >
           <motion.div
-            animate={{ y: [-10, 10, -10] }}
+            animate={reducedMotion ? {} : { y: [-10, 10, -10] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}
             className="relative h-full w-full"
           >
@@ -577,7 +585,16 @@ const Q3_OPTIONS: QuestionOption[] = [
 export function QuizFlow() {
   const [phase, setPhase] = useState<Phase>("intro");
   const [answers, setAnswers] = useState<[Q1Val?, Q2Val?, Q3Val?]>([]);
+  const [reducedMotion, setReducedMotion] = useState(false);
   const blob = PHASE_BLOBS[phase];
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px), (prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   const handleStart = useCallback(() => setPhase("q1"), []);
 
@@ -618,14 +635,9 @@ export function QuizFlow() {
       className="min-h-screen text-crunkie-white"
       style={{ backgroundColor: "#1F1714" }}
     >
-      {/* Animated background blob that transitions per phase */}
-      <AnimatePresence mode="sync">
-        <motion.div
-          key={`bg-${phase}`}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.7 }}
+      {/* Background blob — no AnimatePresence on mobile to avoid repaint cost */}
+      {reducedMotion ? (
+        <div
           aria-hidden
           className="pointer-events-none fixed inset-0 overflow-hidden"
           style={{ zIndex: 0 }}
@@ -636,35 +648,61 @@ export function QuizFlow() {
               width: "50vw",
               height: "50vw",
               backgroundColor: blob.color,
-              filter: "blur(100px)",
-              opacity: 0.7,
+              filter: "blur(30px)",
+              opacity: 0.5,
             }}
           />
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      ) : (
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={`bg-${phase}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
+            aria-hidden
+            className="pointer-events-none fixed inset-0 overflow-hidden"
+            style={{ zIndex: 0 }}
+          >
+            <div
+              className="absolute left-1/4 top-1/4 rounded-full"
+              style={{
+                width: "50vw",
+                height: "50vw",
+                backgroundColor: blob.color,
+                filter: "blur(100px)",
+                opacity: 0.7,
+              }}
+            />
+          </motion.div>
+        </AnimatePresence>
+      )}
 
       <AnimatePresence mode="wait">
         {phase === "intro" && (
           <motion.div
             key="intro"
+            custom={reducedMotion}
             variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.38, ease: EASE_PREMIUM }}
+            transition={{ duration: 0.35, ease: EASE_PREMIUM }}
           >
-            <IntroScreen onStart={handleStart} />
+            <IntroScreen onStart={handleStart} reducedMotion={reducedMotion} />
           </motion.div>
         )}
 
         {phase === "q1" && (
           <motion.div
             key="q1"
+            custom={reducedMotion}
             variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.38, ease: EASE_PREMIUM }}
+            transition={{ duration: 0.35, ease: EASE_PREMIUM }}
           >
             <QuestionScreen
               phaseNum={1}
@@ -672,6 +710,7 @@ export function QuizFlow() {
               options={Q1_OPTIONS}
               accent={PHASE_BLOBS.q1.accent}
               onSelect={handleQ1}
+              reducedMotion={reducedMotion}
             />
           </motion.div>
         )}
@@ -679,11 +718,12 @@ export function QuizFlow() {
         {phase === "q2" && (
           <motion.div
             key="q2"
+            custom={reducedMotion}
             variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.38, ease: EASE_PREMIUM }}
+            transition={{ duration: 0.35, ease: EASE_PREMIUM }}
           >
             <QuestionScreen
               phaseNum={2}
@@ -691,6 +731,7 @@ export function QuizFlow() {
               options={Q2_OPTIONS}
               accent={PHASE_BLOBS.q2.accent}
               onSelect={handleQ2}
+              reducedMotion={reducedMotion}
             />
           </motion.div>
         )}
@@ -698,11 +739,12 @@ export function QuizFlow() {
         {phase === "q3" && (
           <motion.div
             key="q3"
+            custom={reducedMotion}
             variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.38, ease: EASE_PREMIUM }}
+            transition={{ duration: 0.35, ease: EASE_PREMIUM }}
           >
             <QuestionScreen
               phaseNum={3}
@@ -710,6 +752,7 @@ export function QuizFlow() {
               options={Q3_OPTIONS}
               accent={PHASE_BLOBS.q3.accent}
               onSelect={handleQ3}
+              reducedMotion={reducedMotion}
             />
           </motion.div>
         )}
@@ -717,13 +760,14 @@ export function QuizFlow() {
         {phase === "result" && resultSlug && (
           <motion.div
             key="result"
+            custom={reducedMotion}
             variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.38, ease: EASE_PREMIUM }}
+            transition={{ duration: 0.35, ease: EASE_PREMIUM }}
           >
-            <ResultScreen slug={resultSlug} onRestart={handleRestart} />
+            <ResultScreen slug={resultSlug} onRestart={handleRestart} reducedMotion={reducedMotion} />
           </motion.div>
         )}
       </AnimatePresence>
