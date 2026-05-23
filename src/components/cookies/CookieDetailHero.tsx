@@ -184,7 +184,7 @@ export function CookieDetailHero({ cookie, backLabel, flavorLabel }: Props) {
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
           <div
-            className="h-[65vw] max-h-[520px] w-[65vw] max-w-[520px] rounded-full blur-[90px]"
+            className="h-[65vw] max-h-[520px] w-[65vw] max-w-[520px] rounded-full blur-[30px] sm:blur-[90px]"
             style={{ backgroundColor: `${accentColor}33` }}
           />
         </motion.div>
@@ -196,7 +196,7 @@ export function CookieDetailHero({ cookie, backLabel, flavorLabel }: Props) {
           className="pointer-events-none absolute inset-0 flex items-center justify-center"
         >
           <div
-            className="h-[40vw] max-h-[320px] w-[40vw] max-w-[320px] rounded-full blur-[70px]"
+            className="h-[40vw] max-h-[320px] w-[40vw] max-w-[320px] rounded-full blur-[25px] sm:blur-[70px]"
             style={{ backgroundColor: isVegan ? "rgba(106,175,124,0.18)" : "rgba(77,119,146,0.18)" }}
           />
         </motion.div>

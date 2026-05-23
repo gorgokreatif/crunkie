@@ -137,9 +137,9 @@ export function B2BContent({
       >
         {/* Parallax ambient glows */}
         <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-[-15%]">
-          <div className="absolute left-[-5%] top-[10%] h-[55vw] max-h-[500px] w-[55vw] max-w-[500px] rounded-full blur-[140px]" style={{ backgroundColor: "rgba(199,154,91,0.08)" }} />
-          <div className="absolute right-[5%] bottom-[15%] h-[45vw] max-h-[400px] w-[45vw] max-w-[400px] rounded-full bg-crunkie-red/10 blur-[120px]" />
-          <div className="absolute left-[35%] top-[40%] h-[30vw] max-h-[280px] w-[30vw] max-w-[280px] rounded-full blur-[100px]" style={{ backgroundColor: "rgba(77,119,146,0.08)" }} />
+          <div className="absolute left-[-5%] top-[10%] h-[55vw] max-h-[500px] w-[55vw] max-w-[500px] rounded-full blur-[40px] sm:blur-[140px]" style={{ backgroundColor: "rgba(199,154,91,0.08)" }} />
+          <div className="absolute right-[5%] bottom-[15%] h-[45vw] max-h-[400px] w-[45vw] max-w-[400px] rounded-full bg-crunkie-red/10 blur-[35px] sm:blur-[120px]" />
+          <div className="absolute left-[35%] top-[40%] h-[30vw] max-h-[280px] w-[30vw] max-w-[280px] rounded-full blur-[35px] sm:blur-[100px]" style={{ backgroundColor: "rgba(77,119,146,0.08)" }} />
         </motion.div>
 
         {/* Dot texture */}
@@ -418,8 +418,8 @@ export function B2BContent({
       {/* ────── FROZEN COOKIE PROGRAM ────── */}
       <section className="relative overflow-hidden py-24 lg:py-36" style={{ backgroundColor: "#0D0906" }}>
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-[-5%] top-[20%] h-[50vw] max-h-[400px] w-[50vw] max-w-[400px] rounded-full blur-[130px]" style={{ backgroundColor: "rgba(77,119,146,0.12)" }} />
-          <div className="absolute right-[-5%] bottom-[20%] h-[40vw] max-h-[350px] w-[40vw] max-w-[350px] rounded-full blur-[110px]" style={{ backgroundColor: "rgba(255,253,248,0.04)" }} />
+          <div className="absolute left-[-5%] top-[20%] h-[50vw] max-h-[400px] w-[50vw] max-w-[400px] rounded-full blur-[40px] sm:blur-[130px]" style={{ backgroundColor: "rgba(77,119,146,0.12)" }} />
+          <div className="absolute right-[-5%] bottom-[20%] h-[40vw] max-h-[350px] w-[40vw] max-w-[350px] rounded-full blur-[35px] sm:blur-[110px]" style={{ backgroundColor: "rgba(255,253,248,0.04)" }} />
         </div>
 
         <div

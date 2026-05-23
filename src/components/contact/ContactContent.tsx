@@ -120,8 +120,8 @@ export function ContactContent({
       >
         {/* Parallax glows */}
         <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-[-15%]">
-          <div className="absolute right-[5%] top-[15%] h-[50vw] max-h-[460px] w-[50vw] max-w-[460px] rounded-full bg-crunkie-red/8 blur-[130px]" />
-          <div className="absolute left-[5%] bottom-[10%] h-[40vw] max-h-[360px] w-[40vw] max-w-[360px] rounded-full blur-[110px]" style={{ backgroundColor: "rgba(199,154,91,0.07)" }} />
+          <div className="absolute right-[5%] top-[15%] h-[50vw] max-h-[460px] w-[50vw] max-w-[460px] rounded-full bg-crunkie-red/8 blur-[40px] sm:blur-[130px]" />
+          <div className="absolute left-[5%] bottom-[10%] h-[40vw] max-h-[360px] w-[40vw] max-w-[360px] rounded-full blur-[35px] sm:blur-[110px]" style={{ backgroundColor: "rgba(199,154,91,0.07)" }} />
         </motion.div>
 
         {/* Dot texture */}
@@ -281,8 +281,8 @@ export function ContactContent({
         {/* ── INFO (dark) ── */}
         <div className="relative overflow-hidden bg-crunkie-dark px-6 py-20 lg:px-16 lg:py-28">
           {/* Ambient glow */}
-          <div className="pointer-events-none absolute right-[-10%] top-[-10%] h-[50%] w-[50%] rounded-full bg-crunkie-red/8 blur-[100px]" />
-          <div className="pointer-events-none absolute bottom-[-5%] left-[-5%] h-[40%] w-[40%] rounded-full blur-[80px]" style={{ backgroundColor: "rgba(199,154,91,0.06)" }} />
+          <div className="pointer-events-none absolute right-[-10%] top-[-10%] h-[50%] w-[50%] rounded-full bg-crunkie-red/8 blur-[35px] sm:blur-[100px]" />
+          <div className="pointer-events-none absolute bottom-[-5%] left-[-5%] h-[40%] w-[40%] rounded-full blur-[30px] sm:blur-[80px]" style={{ backgroundColor: "rgba(199,154,91,0.06)" }} />
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}

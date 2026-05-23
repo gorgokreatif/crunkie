@@ -193,9 +193,9 @@ export function CookieShowcase() {
 
       {/* ── Ambient color blobs ── */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-[-10%] top-[20%] h-[50vw] max-h-[420px] w-[50vw] max-w-[420px] rounded-full bg-crunkie-red/10 blur-[120px]" />
-        <div className="absolute right-[-8%] bottom-[15%] h-[45vw] max-h-[380px] w-[45vw] max-w-[380px] rounded-full blur-[100px]" style={{ backgroundColor: "rgba(77,119,146,0.10)" }} />
-        <div className="absolute left-[38%] top-[55%] h-[30vw] max-h-[260px] w-[30vw] max-w-[260px] rounded-full bg-crunkie-gold/8 blur-[80px]" />
+        <div className="absolute left-[-10%] top-[20%] h-[50vw] max-h-[420px] w-[50vw] max-w-[420px] rounded-full bg-crunkie-red/10 blur-[35px] sm:blur-[120px]" />
+        <div className="absolute right-[-8%] bottom-[15%] h-[45vw] max-h-[380px] w-[45vw] max-w-[380px] rounded-full blur-[35px] sm:blur-[100px]" style={{ backgroundColor: "rgba(77,119,146,0.10)" }} />
+        <div className="absolute left-[38%] top-[55%] h-[30vw] max-h-[260px] w-[30vw] max-w-[260px] rounded-full bg-crunkie-gold/8 blur-[30px] sm:blur-[80px]" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">

@@ -54,12 +54,12 @@ export function CookiesHero({ title, subtitle, countLabel, count }: CookiesHeroP
       {/* Parallax background layer */}
       <motion.div style={{ y: bgY }} className="pointer-events-none absolute inset-[-10%]">
         {/* Atmospheric blobs */}
-        <div className="absolute left-[-5%] top-[15%] h-[50vw] max-h-[420px] w-[50vw] max-w-[420px] rounded-full bg-crunkie-red/8 blur-[110px]" />
+        <div className="absolute left-[-5%] top-[15%] h-[50vw] max-h-[420px] w-[50vw] max-w-[420px] rounded-full bg-crunkie-red/8 blur-[35px] sm:blur-[110px]" />
         <div
-          className="absolute right-[-4%] bottom-[8%] h-[42vw] max-h-[360px] w-[42vw] max-w-[360px] rounded-full blur-[100px]"
+          className="absolute right-[-4%] bottom-[8%] h-[42vw] max-h-[360px] w-[42vw] max-w-[360px] rounded-full blur-[35px] sm:blur-[100px]"
           style={{ backgroundColor: "rgba(77,119,146,0.10)" }}
         />
-        <div className="absolute left-[38%] top-[55%] h-[32vw] max-h-[280px] w-[32vw] max-w-[280px] rounded-full bg-crunkie-gold/6 blur-[85px]" />
+        <div className="absolute left-[38%] top-[55%] h-[32vw] max-h-[280px] w-[32vw] max-w-[280px] rounded-full bg-crunkie-gold/6 blur-[30px] sm:blur-[85px]" />
 
         {/* Dot grid */}
         <div

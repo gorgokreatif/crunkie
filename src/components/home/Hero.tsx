@@ -281,7 +281,7 @@ export function Hero() {
                 width: blob.size,
                 height: blob.size,
                 backgroundColor: blob.color,
-                filter: `blur(${blob.blur})`,
+                filter: reducedMotion ? `blur(${Math.min(35, parseInt(blob.blur))}px)` : `blur(${blob.blur})`,
                 opacity: blob.opacity,
               }}
             />

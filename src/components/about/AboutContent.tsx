@@ -112,10 +112,10 @@ export function AboutContent({
       >
         {/* Parallax bg */}
         <motion.div style={{ y: heroParallax }} className="pointer-events-none absolute inset-[-14%]">
-          <div className="absolute left-[12%] top-[28%] h-[50vw] max-h-[400px] w-[50vw] max-w-[400px] rounded-full bg-crunkie-gold/10 blur-[120px]" />
-          <div className="absolute right-[8%] top-[18%] h-[40vw] max-h-[340px] w-[40vw] max-w-[340px] rounded-full bg-crunkie-red/8 blur-[100px]" />
+          <div className="absolute left-[12%] top-[28%] h-[50vw] max-h-[400px] w-[50vw] max-w-[400px] rounded-full bg-crunkie-gold/10 blur-[35px] sm:blur-[120px]" />
+          <div className="absolute right-[8%] top-[18%] h-[40vw] max-h-[340px] w-[40vw] max-w-[340px] rounded-full bg-crunkie-red/8 blur-[35px] sm:blur-[100px]" />
           <div
-            className="absolute left-[36%] bottom-[14%] h-[32vw] max-h-[280px] w-[32vw] max-w-[280px] rounded-full blur-[90px]"
+            className="absolute left-[36%] bottom-[14%] h-[32vw] max-h-[280px] w-[32vw] max-w-[280px] rounded-full blur-[30px] sm:blur-[90px]"
             style={{ backgroundColor: "rgba(77,119,146,0.08)" }}
           />
           <div

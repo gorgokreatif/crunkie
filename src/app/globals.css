@@ -118,18 +118,25 @@ body {
 .animate-spin-slow { animation: spin-slow 18s linear infinite; }
 .animate-spin-reverse { animation: spin-slow 22s linear infinite reverse; }
 
-/* ── Reduce motion on mobile / user preference ── */
-@media (max-width: 640px), (prefers-reduced-motion: reduce) {
+/* ── Stop continuous animations on mobile (battery + paint pressure) ── */
+@media (max-width: 640px) {
   .animate-spin-slow,
   .animate-spin-reverse,
   .animate-float,
+  .text-shimmer { animation: none; }
+  .animate-marquee { animation-duration: 60s; }
+  .animate-marquee-slow { animation-duration: 80s; }
+  .animate-marquee-reverse { animation-duration: 70s; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow,
+  .animate-spin-reverse,
+  .animate-float,
+  .animate-marquee,
   .animate-marquee-slow,
-  .text-shimmer {
-    animation-duration: 40s;
-  }
-  .animate-marquee {
-    animation-duration: 60s;
-  }
+  .animate-marquee-reverse,
+  .text-shimmer { animation: none; }
 }
 
 /* ── Scale entrance ── */
