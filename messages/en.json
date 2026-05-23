@@ -197,6 +197,14 @@
       "c": "The classic — but elevated.",
       "d": "Good vibes only. Also plant-based."
     },
+    "q4": {
+      "question": "Your vibe right now:",
+      "a": "Lo-fi beats at midnight.",
+      "b": "Main character energy.",
+      "c": "Soft life supremacy.",
+      "d": "Chaos is the plan."
+    },
+    "calculating": "Reading your cookie soul…",
     "results": {
       "barely-legal": {
         "tagline": "Dangerously Good",

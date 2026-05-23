@@ -197,6 +197,14 @@
       "c": "Das Klassische — aber elevated.",
       "d": "Nur gute Vibes. Auch pflanzlich."
     },
+    "q4": {
+      "question": "Dein Vibe gerade:",
+      "a": "Lo-fi Beats um Mitternacht.",
+      "b": "Main Character Energy.",
+      "c": "Soft Life Supremacy.",
+      "d": "Chaos ist der Plan."
+    },
+    "calculating": "Deine Keks-Seele wird gelesen…",
     "results": {
       "barely-legal": {
         "tagline": "Gefährlich Gut",
