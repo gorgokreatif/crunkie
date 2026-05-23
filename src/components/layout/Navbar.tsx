@@ -92,8 +92,8 @@ export function Navbar() {
                       pathname === href
                         ? "text-crunkie-white"
                         : pill
-                          ? "text-crunkie-dark/50 hover:text-crunkie-dark"
-                          : "text-crunkie-white/65 hover:text-crunkie-white"
+                          ? "text-crunkie-dark/70 hover:text-crunkie-dark"
+                          : "text-crunkie-white/80 hover:text-crunkie-white"
                     )}
                   >
                     {t(key)}
@@ -113,7 +113,7 @@ export function Navbar() {
               aria-label="Toggle menu"
               whileTap={{ scale: 0.88 }}
               className={cn(
-                "flex h-9 w-9 flex-col items-center justify-center gap-[5px] rounded-full md:hidden",
+                "flex h-11 w-11 flex-col items-center justify-center gap-[5px] rounded-full md:hidden",
                 pill ? "bg-crunkie-softcream" : "bg-crunkie-white/10"
               )}
             >
@@ -161,7 +161,7 @@ export function Navbar() {
                       "block rounded-xl px-4 py-3 font-sans text-sm font-bold uppercase tracking-[0.2em] transition-colors",
                       pathname === href
                         ? "bg-crunkie-red text-crunkie-white"
-                        : "text-crunkie-dark/55 hover:bg-crunkie-softcream hover:text-crunkie-dark"
+                        : "text-crunkie-dark/75 hover:bg-crunkie-softcream hover:text-crunkie-dark"
                     )}
                   >
                     {t(key)}

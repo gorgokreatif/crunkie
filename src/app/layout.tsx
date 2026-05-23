@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Playfair_Display, DM_Sans } from "next/font/google";
+import { getLocale } from "next-intl/server";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -46,11 +47,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  let locale = "de";
+  try { locale = await getLocale(); } catch {}
+
   return (
     <html
+      lang={locale}
       suppressHydrationWarning
       className={`${fraunces.variable} ${playfair.variable} ${dmSans.variable} h-full`}
     >

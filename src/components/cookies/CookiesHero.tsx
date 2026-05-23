@@ -153,7 +153,7 @@ export function CookiesHero({ title, subtitle, countLabel, count }: CookiesHeroP
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.52, duration: 0.7, ease: EASE_PREMIUM }}
-          className="mt-5 max-w-md font-sans text-base text-crunkie-cream/45 lg:text-lg"
+          className="mt-5 max-w-md font-sans text-base text-crunkie-cream/65 lg:text-lg"
         >
           {subtitle}
         </motion.p>

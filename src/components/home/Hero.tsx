@@ -434,7 +434,7 @@ export function Hero() {
                   transition={{ duration: 2.2, repeat: Infinity, delay: 1.4 }}
                   className="h-1.5 w-1.5 rounded-full bg-crunkie-red"
                 />
-                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.32em] text-crunkie-cream/40">
+                <span className="font-sans text-[10px] font-bold uppercase tracking-[0.32em] text-crunkie-cream/60">
                   Bonn, Germany
                 </span>
               </div>
@@ -483,7 +483,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.72, duration: 0.6, ease: EASE_PREMIUM }}
-                className="mb-5 max-w-[30ch] font-sans text-sm leading-relaxed text-crunkie-cream/45 lg:text-base"
+                className="mb-5 max-w-[30ch] font-sans text-sm leading-relaxed text-crunkie-cream/65 lg:text-base"
               >
                 {t("subtitle")}
               </motion.p>
@@ -586,25 +586,29 @@ export function Hero() {
                   whileTap={{ scale: 0.86 }}
                   transition={{ type: "spring", stiffness: 500, damping: 22 }}
                   aria-label="Previous"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-crunkie-cream/12 font-bold text-crunkie-cream/36 transition-colors hover:border-crunkie-red hover:text-crunkie-red"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-crunkie-cream/12 font-bold text-crunkie-cream/36 transition-colors hover:border-crunkie-red hover:text-crunkie-red"
                 >
                   ←
                 </motion.button>
 
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-0.5">
                   {SLIDES.map((_, i) => (
                     <motion.button
                       key={i}
                       onClick={() => goTo(i)}
                       aria-label={`Slide ${i + 1}`}
-                      animate={{
-                        width: i === active ? 22 : 7,
-                        opacity: i === active ? 1 : 0.28,
-                        backgroundColor: i === active ? slide.accent : "#FFFDF8",
-                      }}
-                      transition={{ type: "spring", stiffness: 380, damping: 28 }}
-                      className="h-[7px] rounded-full"
-                    />
+                      className="flex h-11 items-center justify-center px-1"
+                    >
+                      <motion.span
+                        animate={{
+                          width: i === active ? 22 : 7,
+                          opacity: i === active ? 1 : 0.28,
+                          backgroundColor: i === active ? slide.accent : "#FFFDF8",
+                        }}
+                        transition={{ type: "spring", stiffness: 380, damping: 28 }}
+                        className="block h-[7px] rounded-full"
+                      />
+                    </motion.button>
                   ))}
                 </div>
 
@@ -614,7 +618,7 @@ export function Hero() {
                   whileTap={{ scale: 0.86 }}
                   transition={{ type: "spring", stiffness: 500, damping: 22 }}
                   aria-label="Next"
-                  className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-crunkie-cream/12 font-bold text-crunkie-cream/36 transition-colors hover:border-crunkie-red hover:text-crunkie-red"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-crunkie-cream/12 font-bold text-crunkie-cream/36 transition-colors hover:border-crunkie-red hover:text-crunkie-red"
                 >
                   →
                 </motion.button>

@@ -41,12 +41,12 @@ export function LanguageSwitcher({
           type="button"
           onClick={() => switchLocale(lang)}
           className={cn(
-            "relative cursor-pointer rounded-full px-3 py-1 uppercase tracking-widest transition-colors duration-200",
+            "relative cursor-pointer rounded-full px-3 py-2 uppercase tracking-widest transition-colors duration-200",
             locale === lang
               ? "text-crunkie-white"
               : variant === "dark"
-                ? "text-crunkie-cream/35 hover:text-crunkie-cream/70"
-                : "text-crunkie-dark/40 hover:text-crunkie-dark/70"
+                ? "text-crunkie-cream/55 hover:text-crunkie-cream/80"
+                : "text-crunkie-dark/60 hover:text-crunkie-dark/85"
           )}
         >
           {locale === lang && (
